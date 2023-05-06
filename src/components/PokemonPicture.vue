@@ -3,7 +3,6 @@
   <div class="pokemon-container">
     <img class="hidden-pokemon" :src="imgSrc" alt="Pokemon">
     <img v-if="showPokemon" class="fade-in" :src="imgSrc" alt="Pokemon">
-
   </div>
 </template>
 
@@ -48,5 +47,17 @@ img {
 
 .hidden-pokemon {
   filter: brightness(0);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .image-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .image-container {
+    width: 30%;
+  }
 }
 </style>

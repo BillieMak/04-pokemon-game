@@ -1,7 +1,7 @@
 <template>
     <div v-if="!pokemon" class="loading-spiner"></div>
     <div v-else>
-        <h1>Quien es este Pokemon</h1>
+        <h1>Quien es este Pokemon ?</h1>
         <!-- img -->
         <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
         <!-- Opciones -->
