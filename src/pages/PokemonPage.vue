@@ -61,7 +61,7 @@ export default {
             } else {
                 setTimeout(() => {
                     this.newGame()
-                }, 2000)
+                },700)
                 this.message = `Incorrecto: El pokemon es ${this.pokemon.name}`
             }
 
