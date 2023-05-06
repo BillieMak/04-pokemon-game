@@ -31,22 +31,38 @@ export default {
 <style scoped>
 .pokemon-container {
   height: 200px;
+  animation: float 3s ease-in-out infinite;
 }
 
 img {
   height: 200px;
   position: absolute;
   width: 100vw;
+  margin-top: 30px;
   margin-left: -50vw;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
+
+
 }
 
 .hidden-pokemon {
   filter: brightness(0);
+}
+
+@keyframes float{
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

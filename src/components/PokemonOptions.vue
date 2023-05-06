@@ -31,8 +31,8 @@ export default {
 </script>
 
 <style scoped>
-.dsd  span{
-    font-size: 1.5rem;
+.options-container{
+    margin-top: 20px;
 }
 ul {
     list-style-type: none;
