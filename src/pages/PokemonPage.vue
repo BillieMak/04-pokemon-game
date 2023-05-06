@@ -81,6 +81,7 @@ export default {
     justify-content: center;
     height: 100vh;
     gap: 20px;
+    transform: scale(1);
 }
 .loading-spiner {
     border: 8px solid #f3f3f3;
