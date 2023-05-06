@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .pokemon-container {
   height: 200px;
-  animation: float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 img {
@@ -45,8 +45,6 @@ img {
   -ms-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-
-
 }
 
 .hidden-pokemon {
