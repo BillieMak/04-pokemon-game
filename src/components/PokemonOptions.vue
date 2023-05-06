@@ -45,14 +45,20 @@ li {
     cursor: pointer;
     color: white;
     background-color: rgb(76, 135, 246);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     width: 200px;
-    padding: 8px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 li:hover {
     background-color: rgba(18, 99, 248, 0.9);
+}
+li:active {
+    transform: scale(0.9);
 }
 
 .options-container {
