@@ -1,6 +1,6 @@
 <template>
     <div v-if="!pokemon" class="loading-spiner"></div>
-    <div v-else>
+    <div v-else class="container-app">
         <h1>Quien es este Pokemon ?</h1>
         <!-- img -->
         <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
@@ -74,7 +74,14 @@ export default {
 </script>
 
 <style scoped>
-/* create a loading */
+.container-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+}
 .loading-spiner {
     border: 8px solid #f3f3f3;
     /* Light grey */
@@ -86,6 +93,10 @@ export default {
     animation: spin 2s linear infinite;
     margin: 0 auto;
     margin-top: 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
