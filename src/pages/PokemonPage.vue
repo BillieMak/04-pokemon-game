@@ -1,12 +1,14 @@
 <template>
-    <div v-if="!pokemon" class="loading-spiner"></div>
+    <div v-if="!pokemon" class="spinner-container">
+        <div class="loading-spiner"></div>
+    </div>
     <div v-else class="container-app">
         <h1>Quien es este Pokemon ?</h1>
         <!-- img -->
         <PokemonPicture :pokemonId="pokemon.id" :showPokemon="showPokemon" />
         <!-- Opciones -->
         <PokemonOptions :pokemons="pokemonArr" @selection="checkAnswer" />
- 
+
         <template v-if="showAnswer">
             <h2>{{ message }}</h2>
         </template>
@@ -39,7 +41,7 @@ export default {
             this.message = ''
             this.showPokemon = false
             this.showAnswer = false
-            this.pokemon= null
+            this.pokemon = null
             this.mixPokemonsArray()
         },
         async mixPokemonsArray() {
@@ -61,7 +63,7 @@ export default {
             } else {
                 setTimeout(() => {
                     this.newGame()
-                },700)
+                }, 700)
                 this.message = `Incorrecto: El pokemon es ${this.pokemon.name}`
             }
 
@@ -74,7 +76,7 @@ export default {
 </script>
 
 <style scoped>
-.container-app{
+.container-app {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,21 +85,22 @@ export default {
     gap: 20px;
     /* transform: scale(1); */
 }
+
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .loading-spiner {
     border: 8px solid #f3f3f3;
-    /* Light grey */
     border-top: 8px solid #3498db;
-    /* Blue */
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 2s linear infinite;
-    margin: 0 auto;
-    margin-top: 50px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
