@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en Pokemon Picture Debe hacer match con el snapshot 1`] = `
+<h3>Pokemon Picture</h3>
+<div class="pokemon-container"><img class="hidden-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pokemon">
+  <!--v-if-->
+</div>
+`;
